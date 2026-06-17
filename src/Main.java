@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Locale;
 public class Main{
@@ -136,5 +137,49 @@ public class Main{
         System.out.println("Successful login");
 
         // arrays
+        // creating arrays
+        // first method
+        String[] friends = {"Jacob", "Fred","Lugard", "Kelly" };
+        // second method
+        String[] Friends = new String[5]; // this array has a length of 5
+        // adding elements to this array
+        // using a loop
+        Scanner item = new Scanner(System.in);
+        int  Length = Friends.length;
+        int j =0;
+        while (j< Length){
+            System.out.println("What is the new item of the string?");
+            String new_item = item.nextLine();
+            Friends[j] = new_item;
+            j++;
+
+        }
+        System.out.println(Arrays.toString(Friends));
+        // printing it out using a loop (a foreach loop to be specific)
+        for(String words : Friends){
+            System.out.println(words);
+        }
+        // 2d arrays
+        // creating 2d arrays; They are in a way rows by columns
+        // first method
+        int[][] numbers = {
+                {1,2,3,4},
+                {5,6,7,8},
+                {9,10,11,12},
+                {13,14,15,16}
+        };
+        // printing out this 2D array
+        System.out.println(Arrays.deepToString(numbers));
+        // printing them out using nested loops
+        int rows;
+        int columns;
+        for(rows = 0; rows < numbers.length; rows++){
+            for (columns = 0; columns < numbers[rows].length; columns++){
+                 System.out.println(numbers[rows][columns] );
+            }
+        }
+        System.out.println("Printing Successful");
+
+
     }
 }
